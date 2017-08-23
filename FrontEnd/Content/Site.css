@@ -1,0 +1,76 @@
+﻿/**/
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /* max-width: 280px; */
+}
+/*custom */
+
+.picture {
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fixed-height-200 {
+    min-height: 200px !important;
+    max-height: 200px !important;
+    display: block !important;
+    position: relative;
+    overflow-y: hidden !important;
+    background-color: #f7f7f7 !important;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.picTitle {
+    padding: 20px;
+    background: #fff;
+}
+
+    .picTitle h3 {
+        margin: 0 0 3px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+.bg-color-light, .picBody {
+    background-color: #f7f7f7 !important;
+}
+
+.picBody > table td:first-child {
+        font-weight: bold;
+}
+.sort-icon {
+    font-size: 9px;
+    margin-left: 5px;
+}
+
+th {
+    cursor: pointer;
+}

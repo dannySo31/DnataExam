@@ -1,0 +1,52 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">
+        Filter
+
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Name</label>
+                    <div class="editor-field">
+                        <input type="text" class="form-control" ng-model="hotelSearch.Name" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>User Rating</label>
+                    <div class="editor-field">
+                        <input type="text" class="form-control" ng-model="hotelSearch.UserRating" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Min Cost</label>
+                    <div class="editor-field">
+                        <input type="text" class="form-control" ng-model="hotelSearch.MinCost" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Stars</label>
+                    <div class="editor-field">
+                        <select class="form-control" ng-model="hotelSearch.SelectedStar">
+                            <option ng-repeat="option in hotelSearch.Stars" ng-selected="hotelSearch.SelectedStar.value == option.value" value="{{option.value}}">{{option.text}}</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12" style="text-align:right">
+                <input typeof="submit" id="btn-search" class="btn btn-primary" value="Search"  ng-click="hotelSearch.search()"/>
+                  
+
+
+            </div>
+        </div>
+    </div>
+</div>

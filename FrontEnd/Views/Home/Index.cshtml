@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Hotel Search</h1>
+
+<div class="row" ng-app="hotelsApp">
+    <div class="col-md-12" ng-controller="hotelSearchController as hotelSearch">
+        <div ng-include="'/Scripts/custom/angularjs/hotels/SearchFilter.html'"></div>
+
+    </div>
+    <div class="col-md-12" ng-controller="hotelsController as hotel">
+        <div class="row">
+            <div class="col-md-12">
+                <div ng-include="'/Scripts/custom/angularjs/hotels/SearchResults.html'"></div>
+            </div>
+           
+        </div>
+    </div>
+
+
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/angularjs")
+    <script src="~/Scripts/custom/angularjs/hotels/hotels.js"></script>
+    <script src="~/Scripts/custom/angularjs/hotels/hotel-service.js"></script>
+    <script src="~/Scripts/custom/angularjs/pager-service.js"></script>
+<script src="~/Scripts/custom/angularjs/drPagination.js"></script>
+}

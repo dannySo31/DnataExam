@@ -1,0 +1,58 @@
+﻿<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>
+
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Establishment type
+            </th>
+            <th ng-click="hotel.sort('Distance')">
+                Distance<span class="glyphicon sort-icon" ng-show="hotel.sortKey=='Distance'" ng-class="{'glyphicon-chevron-up':hotel.reverse,'glyphicon-chevron-down':!hotel.reverse}"></span>
+            </th>
+            <th>
+                Location
+            </th>
+            <th ng-click="hotel.sort('MinCost')">
+                Min Cost<span class="glyphicon sort-icon" ng-show="hotel.sortKey=='MinCost'" ng-class="{'glyphicon-chevron-up':hotel.reverse,'glyphicon-chevron-down':!hotel.reverse}"></span>
+            </th>
+            <th ng-click="hotel.sort('UserRating')">
+                User Rating<span class="glyphicon sort-icon" ng-show="hotel.sortKey=='UserRating'" ng-class="{'glyphicon-chevron-up':hotel.reverse,'glyphicon-chevron-down':!hotel.reverse}"></span>
+            </th>
+            <th ng-click="hotel.sort('Stars')">
+                Stars<span class="glyphicon sort-icon" ng-show="hotel.sortKey=='Stars'" ng-class="{'glyphicon-chevron-up':hotel.reverse,'glyphicon-chevron-down':!hotel.reverse}"></span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr dir-paginate="hotelModel in hotel.hotels | orderBy:hotel.sortKey:hotel.reverse|hotelSearch:hotel.searchParams|itemsPerPage:20">
+            <td><img class="img-responsive center-block" ng-src={{hotelModel.ThumbnailUrl}} alt="{{hotelModel.Name}}" /></td>
+            <td>{{hotelModel.Name}}</td>
+            <td>
+                {{hotelModel.EstablishmentType}}
+            </td>
+            <td>
+                {{hotelModel.Distance}}
+            </td>
+            <td>
+                {{hotelModel.Location}}
+            </td>
+            <td>
+                {{hotelModel.MinCost}}
+            </td>
+            <td>
+                {{hotelModel.UserRatingTitle}}({{hotelModel.UserRating}})
+            </td>
+            <td>
+                {{hotelModel.Stars}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<dir-pagination-controls max-size="20"
+                         direction-links="true"
+                         boundary-links="true">
+</dir-pagination-controls>
